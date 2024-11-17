@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap" rel="stylesheet">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="index.css">
+  <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <style>
+    .content {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    .loginbox {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 10px;
+    }
+    input, button {
+      margin: 5px 0;
+      padding: 10px;
+      width: 200px;
+    }
+  </style>
+</head>
+<body>
+  <div class="navbar">
+    <img src="img/2.png" width="100px"/>
+  </div>
+  <div class="content">
+    <div class="loginbox">
+      <form id="loginForm">
+        <input type="text" id="username" placeholder="Email" required>
+        <input type="password" id="password" placeholder="Password" required>
+        <button type="submit">Login</button>
+      </form>
+    </div>
+  </div>
+  <script type="module" src="script/module/login.js">
+  </script>
+</body>
+</html>

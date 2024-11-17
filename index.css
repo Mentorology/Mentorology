@@ -1,0 +1,359 @@
+body {
+    font-family: Rethink Sans, sans-serif;
+    margin: 0;
+    background-color: #fafafa;
+  }
+
+  .navbar {
+    display: flex;
+    padding: 20px;
+    background-color: #e6f0ff;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    align-items: center;
+  }
+  .navbar a {
+    color: #333;
+    text-decoration: none;
+    margin-right: 10px;
+  }
+
+  .navbar img {
+    margin-right: 10px;
+  }
+
+  .content {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: none;
+  }
+  
+  #uploadContainer {
+    display: block;
+    border: 2px dashed #ccc;
+    padding: 40px;
+    text-align: center;
+    color: #777;
+    cursor: pointer;
+  }
+  
+  #uploadContainer.dragover {
+    border-color: #004aad;
+    background-color: #d0e4ff;
+    color: #004aad;
+  }
+  
+  input[type="file"] {
+    display: none;
+  }
+  
+  #progressBar {
+    width: 100%;
+    background-color: #eee;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-top: 20px;
+  }
+  
+  #progressBar div {
+    height: 20px;
+    width: 0;
+    background-color: #004aad;
+  }
+  
+  .accuracy-ring svg {
+    width: 100px;
+    height: 100px;
+    display: block;
+    margin: 20px auto;
+  }
+  
+  .correct {
+    color: #00e15a;
+  }
+  
+  .incorrect {
+    color: #f44336;
+  }
+  
+  h3 {
+    margin-top: 0;
+  }
+  
+  svg {
+    width: 100px;
+    height: 100px;
+  }
+  
+  .incorrect-question {
+    border-bottom: 1px solid #ccc;
+    padding: 10px 0;
+  }
+
+  .loginbox {
+    background-color: #fff;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    border-radius: 8px;
+    width: 300px;
+    display: flex;
+  }
+
+  .loginbox input[type="text"],
+  .loginbox input[type="password"] {
+      width: 90%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-family: Rethink Sans, sans-serif;
+  }
+  .loginbox button {
+      width: 100%;
+      padding: 10px;
+      background-color: #00327a;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+      font-size: 16px;
+      font-family: Rethink Sans, sans-serif;
+      transition: ease, 0.3s;
+  }
+  .loginbox button:hover {
+    background-color: #004dba;
+  }
+
+  .special {
+    margin-left: auto;
+  }
+
+  .profile-settings {
+    padding: 20px;
+  }
+  
+.forum-container {
+  max-width: 800px;
+  margin: 20px auto;
+  padding: 0 20px;
+}
+
+.forum-box {
+  border: 1px solid #ccc;
+  padding: 15px;
+  margin-bottom: 15px;
+  cursor: pointer;
+  background-color: #f9f9f9;
+}
+
+.forum-box:hover {
+  background-color: #f1f1f1;
+}
+
+.forum-box h3 {
+  margin-top: 0;
+}
+
+.toggle-comments {
+  margin-top: 10px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  padding: 7px 15px;
+  cursor: pointer;
+}
+
+.toggle-comments:hover {
+  background-color: #0056b3;
+}
+
+.comments-section {
+  margin-top: 15px;
+  border-top: 1px solid #ccc;
+  padding-top: 15px;
+}
+
+.comments-container p {
+  margin: 10px 0;
+}
+
+.comment-form {
+  display: flex;
+  margin-top: 10px;
+}
+
+.comment-input {
+  flex: 1;
+  padding: 5px;
+}
+
+.comment-form button {
+  padding: 5px 10px;
+}
+
+/* Floating Button Styles */
+.floating-button {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  width: 50px;
+  height: 50px;
+  background-color: #28A745;
+  color: #fff;
+  border: none;
+  border-radius: 50%;
+  font-size: 30px;
+  line-height: 0;
+  cursor: pointer;
+}
+
+.floating-button:hover {
+  background-color: #218838;
+}
+
+/* Post Form Styles */
+.post-form-container {
+  display: none; /* Hidden by default */
+  position: fixed;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -20%);
+  background-color: #fff;
+  width: 80%;
+  max-width: 500px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  z-index: 1000;
+}
+
+.post-form-container h2 {
+  margin-top: 0;
+}
+
+.post-form-container input[type="text"],
+.post-form-container textarea {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+}
+
+.post-form-container textarea {
+  resize: vertical;
+  height: 100px;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.form-buttons button {
+  margin-left: 10px;
+  padding: 7px 15px;
+}
+
+#cancelPostButton {
+  background-color: #dc3545;
+  color: #fff;
+  border: none;
+}
+
+#cancelPostButton:hover {
+  background-color: #c82333;
+}
+
+.post-form-container button[type="submit"] {
+  background-color: #28A745;
+  color: #fff;
+  border: none;
+}
+
+.post-form-container button[type="submit"]:hover {
+  background-color: #218838;
+}
+
+/* Overlay to dim the background when form is open */
+.post-form-container::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0.5);
+  z-index: -1;
+}
+  
+  /* Color Palette
+  :root {
+    --primary-color: #004aad;
+    --secondary-color: #d0e4ff;
+    --accent-color: #0073e6;
+    --light-color: #e6f0ff;
+    --dark-color: #00327a;
+  }
+    */
+
+    .profile-container {
+      background-color: white;
+      padding: 20px;
+      margin: 10px;
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      width: 90%;
+      height: calc(100% - 60px); /* Adjusting for navbar height */
+      box-sizing: border-box;
+    }
+    
+    .profile-container h1 {
+      margin: 0;
+      font-size: 24px;
+    }
+    .profile-container p {
+      margin: 10px 0 0;
+    }
+
+    .home-container {
+      display: flex;
+      flex-direction: column;
+      background-color: rgb(255, 255, 255);
+      padding: 20px;
+      margin: 20px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+    }
+
+    .button-container {
+      display: flex;
+      flex-direction: row;
+    }
+
+    .button-container-button {
+      margin: 10px;
+      display: flex;
+      flex-direction: column;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+      border-radius: 10px;
+      width: 250px;
+      height: 150px;
+      align-items: center;
+      justify-content: center;
+      color: white;
+      text-decoration: none;
+      transition: ease, 0.3s;
+    }
+
+    .button-container-button:hover {
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    }
